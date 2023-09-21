@@ -1,0 +1,21 @@
+// font-family
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Mooli&family=Noto+Serif+TC:wght@400;700&family=Rokkitt:wght@400;700&display=swap');
+
+html, body {
+    font-family: 'Rokkitt', 'Noto Serif TC' ,cursive, sans-serif;
+};
+
+img {
+    display: block;
+    max-width: 100%;
+  height: auto;
+  }
+
+.ff {
+    &--Mooli {
+        font-family: 'Mooli', sans-serif;
+    };
+    &--DancingScript {
+        font-family: 'Dancing Script', cursive,sans-serif;;
+    };
+}
