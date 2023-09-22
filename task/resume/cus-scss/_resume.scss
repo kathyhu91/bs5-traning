@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Great+Vibes&family=Noto+Serif+TC:wght@400;700&display=swap');
+html,body {
+    font-family: 'Arsenal', 'Noto Serif TC', serif,sans-serif;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+.ff {
+    &--particular {
+        font-family: 'Great Vibes', cursive;
+    }
+}
+
+
+.banner-position {
+    top: 30px; bottom: 30px; right: 30px; left: 30px;
+}
+.bg-cover{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.bg-dark-gradient {
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+}
