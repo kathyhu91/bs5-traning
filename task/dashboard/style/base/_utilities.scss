@@ -799,15 +799,8 @@ $utilities: map-merge(
       property: z-index,
       class: z,
       values: $zindex-levels,
-    ),
-    // scss-docs-end utils-zindex
-
-    // cus
-    "bg-attachment": (
-      property: background-attachment,
-      class: "bg-attachment",
-      values: fixed,
     )
+    // scss-docs-end utils-zindex
   ),
   $utilities
 );

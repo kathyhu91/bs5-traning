@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+html,
+body {
+  font-family: "Open Sans", "Noto Serif TC", serif, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+// cus
+.card--hover {
+  &:hover {
+    color: #005577;
+    cursor: pointer;
+    background: rgba(227, 221, 131, 0.25);
+  }
+}
