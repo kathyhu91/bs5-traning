@@ -799,8 +799,16 @@ $utilities: map-merge(
       property: z-index,
       class: z,
       values: $zindex-levels,
-    )
+    ),
     // scss-docs-end utils-zindex
+
+    // cus
+    // cursor
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      values:pointer,
+    )
   ),
   $utilities
 );

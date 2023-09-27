@@ -5,6 +5,15 @@
 
 // Color system
 
+// cus
+$night:#3a7ca5;
+$sun-light:#e9c46a;
+$hongxia : #e56b6f;
+$fog: #81c3D7;
+$forest: #2a9d8f;
+$stucco: #8993ac;
+
+
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
@@ -298,14 +307,23 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
+// cus-color
+$primary:       $night !default;
+$secondary:     $stucco!default;
+$success:       $forest !default;
+$info:          $fog !default;
+$warning:       $sun-light !default;
+$danger:        $hongxia !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-900 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -1581,7 +1599,7 @@ $list-group-color:                  var(--#{$prefix}body-color) !default;
 $list-group-bg:                     var(--#{$prefix}body-bg) !default;
 $list-group-border-color:           var(--#{$prefix}border-color) !default;
 $list-group-border-width:           var(--#{$prefix}border-width) !default;
-$list-group-border-radius:          var(--#{$prefix}border-radius) !default;
+$list-group-border-radius:          var(--#{$prefix}border-radius-lg) !default;
 
 $list-group-item-padding-y:         $spacer * .5 !default;
 $list-group-item-padding-x:         $spacer !default;

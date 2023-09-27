@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../style/all-dashboard.css" />
+    <title>Order List- Bakery Shop</title>
+  </head>
+
+  <body>
+    <div class="d-flex">
+      <!-- nav -->
+      <aside class="sidebar vh-100 pt-3 d-flex flex-column bg-white border-end">
+        <!-- shop title -->
+        <div class="px-4 pt-1 pb-3">
+          <h2 class="fs-6 fw-bold text-warning text-center">
+            <strong>Backery Shop</strong> - Dashboard
+          </h2>
+        </div>
+        <!-- nav -->
+        <div class="overflow-auto">
+          <!-- index -->
+          <div>
+            <a class="sidebar--link px-4 w-100" href="./dashboard.html">
+              <i class="bi bi-house me-2"></i>
+              Home
+            </a>
+          </div>
+          <!-- order -->
+          <div>
+            <a
+              class="sidebar--link px-4 d-flex justify-content-between"
+              href="#orderNav"
+              data-bs-toggle="collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="orderNav"
+            >
+              <div>
+                <i class="bi bi-cart me-2"></i>
+                Order Management
+              </div>
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <div class="collapse" id="orderNav">
+              <a
+                href="./orderList.html"
+                class="d-block ps-5 sidebar--link active"
+                ><i class="bi bi-clipboard-data me-2"></i>Order List
+              </a>
+              <a href="./order.html" class="d-block ps-5 sidebar--link"
+                ><i class="bi bi-bag-check me-2"></i>Individual Order Detail
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- logout -->
+        <div class="mt-auto px-4 py-3">
+          <button class="btn btn-outline-warning w-100 mt-auto">logout</button>
+        </div>
+      </aside>
+      <main class="main d-flex flex-column">
+        <header class="bg-white w-100 border-bottom">
+          <a
+            href="#"
+            class="d-inline-block py-3 px-4 border-end link-primary text-decoration-none"
+            id="toggle-nav-btn"
+            ><i class="bi bi-arrows-angle-expand"></i
+          ></a>
+        </header>
+        <section>
+          <div class="container py-4">
+            <h2 class="display-4 text-primary mb-5 text-end">
+              Order Management
+            </h2>
+            <!-- nav -->
+            <ul class="nav nav-pills mb-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link rounded-pill active"
+                  aria-current="page"
+                  href="#"
+                  >All
+                  <span class="badge rounded-pill bg-light text-dark ms-2"
+                    >900</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ounded-pill" href="#"
+                  >Pending<span
+                    class="badge rounded-pill bg-primary text-light ms-2"
+                    >300</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ounded-pill" href="#"
+                  >Processing<span
+                    class="badge rounded-pill bg-primary text-light ms-2"
+                    >500</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item ounded-pill">
+                <a class="nav-link" href="#"
+                  >Completed<span
+                    class="badge rounded-pill bg-primary text-light ms-2"
+                    >100</span
+                  ></a
+                >
+              </li>
+            </ul>
+            <!-- data list -->
+            <div class="card shadow-sm mb-3">
+              <!-- search  -->
+              <div class="card-header bg-transparent">
+                <div class="input-group">
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-outline-dark dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      setting
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control boder-0 shadow-none"
+                    placeholder="search keyword"
+                  />
+                  <span
+                    class="input-group-text bg-transparent border-0 cursor-pointer fw-bold"
+                    ><i class="bi bi-search"></i
+                  ></span>
+                </div>
+              </div>
+              <!-- list -->
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table table-hover mb-0">
+                    <thead class="">
+                      <tr class="align-middle">
+                        <th scope="col" class="ps-4"></th>
+                        <th scope="col" class="py-3">Order Number</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Amount Price</th>
+                        <th scope="col">Pay state</th>
+                        <th scope="col">Order state</th>
+                        <th scope="col" class="text-end pe-4">Edit</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-nowrap">
+                      <tr class="align-middle cursor-pointer">
+                        <td scope="row" class="ps-4">
+                          <input
+                            type="checkbox"
+                            class="form-check-input border-dark"
+                          />
+                        </td>
+                        <td class="py-3">CH123456784</td>
+                        <td class="py-3">Mandy</td>
+                        <td class="py-3">mandy1234@email.com</td>
+                        <td class="text-end py-3">900</td>
+                        <td class="py-3">
+                          <span class="text-danger">unpaid</span>
+                        </td>
+                        <td class="py-3">
+                          <span class="text-danger">pending</span>
+                        </td>
+                        <td class="pe-4 py-3">
+                          <div class="d-flex justify-content-end">
+                            <div class="btn-group w-50">
+                              <button
+                                href="#"
+                                class="btn btn-sm btn-outline-dark text-end"
+                              >
+                                <i class="bi bi-pen"></i>
+                              </button>
+                              <button
+                                class="btn btn-outline-dark dropdown-toggle text-end"
+                                type="button"
+                                id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="bi bi-gear"></i>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton1"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >edit state</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-danger"
+                                    href="#"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                    data-bs-order-id="CH123456784"
+                                    >delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="align-middle cursor-pointer">
+                        <td scope="row" class="ps-4">
+                          <input
+                            type="checkbox"
+                            class="form-check-input border-dark"
+                          />
+                        </td>
+                        <td class="py-3">CH123456785</td>
+                        <td class="py-3">Ellen</td>
+                        <td class="py-3">ellen1234@email.com</td>
+                        <td class="text-end py-3">450</td>
+                        <td class="py-3">
+                          <span class="text-danger">unpaid</span>
+                        </td>
+                        <td class="py-3">
+                          <span class="text-danger">pending</span>
+                        </td>
+                        <td class="pe-4 py-3">
+                          <div class="d-flex justify-content-end">
+                            <div class="btn-group w-50">
+                              <button
+                                href="#"
+                                class="btn btn-sm btn-outline-dark text-end"
+                              >
+                                <i class="bi bi-pen"></i>
+                              </button>
+                              <button
+                                class="btn btn-outline-dark dropdown-toggle text-end"
+                                type="button"
+                                id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="bi bi-gear"></i>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton1"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >edit state</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-danger"
+                                    href="#"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                    data-bs-order-id="CH123456785"
+                                    >delete</a
+                                  >>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="align-middle cursor-pointer">
+                        <td scope="row" class="ps-4">
+                          <input
+                            type="checkbox"
+                            class="form-check-input border-dark"
+                          />
+                        </td>
+                        <td class="py-3">CH123456786</td>
+                        <td class="py-3">Bob</td>
+                        <td class="py-3">bob77516@email.com</td>
+                        <td class="text-end py-3">8,500</td>
+                        <td class="py-3">
+                          <span class="text-success">paid</span>
+                        </td>
+                        <td class="py-3">
+                          <span class="text-primary">processing</span>
+                        </td>
+                        <td class="pe-4 py-3">
+                          <div class="d-flex justify-content-end">
+                            <div class="btn-group w-50">
+                              <button
+                                href="#"
+                                class="btn btn-sm btn-outline-dark text-end"
+                              >
+                                <i class="bi bi-pen"></i>
+                              </button>
+                              <button
+                                class="btn btn-outline-dark dropdown-toggle text-end"
+                                type="button"
+                                id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="bi bi-gear"></i>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton1"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >edit state</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-danger"
+                                    href="#"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                    data-bs-order-id="CH123456786"
+                                    >delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="align-middle cursor-pointer">
+                        <td scope="row" class="ps-4">
+                          <input
+                            type="checkbox"
+                            class="form-check-input border-dark"
+                          />
+                        </td>
+                        <td class="py-3">CH123456787</td>
+                        <td class="py-3">Mifi</td>
+                        <td class="py-3">mifi789@email.com</td>
+                        <td class="text-end py-3">5,800</td>
+                        <td class="py-3">
+                          <span class="text-success">paid</span>
+                        </td>
+                        <td class="py-3">
+                          <span class="text-primary">processing</span>
+                        </td>
+                        <td class="pe-4 py-3">
+                          <div class="d-flex justify-content-end">
+                            <div class="btn-group w-50">
+                              <button
+                                href="#"
+                                class="btn btn-sm btn-outline-dark text-end"
+                              >
+                                <i class="bi bi-pen"></i>
+                              </button>
+                              <button
+                                class="btn btn-outline-dark dropdown-toggle text-end"
+                                type="button"
+                                id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="bi bi-gear"></i>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton1"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >edit state</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-danger"
+                                    href="#"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                    data-bs-order-id="CH123456787"
+                                    >delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="align-middle cursor-pointer">
+                        <td scope="row" class="ps-4">
+                          <input
+                            type="checkbox"
+                            class="form-check-input border-dark"
+                          />
+                        </td>
+                        <td class="py-3">CH123456788</td>
+                        <td class="py-3">Luna</td>
+                        <td class="py-3">luna1234@email.com</td>
+                        <td class="text-end py-3">500</td>
+                        <td class="py-3">
+                          <span class="text-success">paid</span>
+                        </td>
+                        <td class="py-3">
+                          <span class="text-muted">completed</span>
+                        </td>
+                        <td class="pe-4 py-3">
+                          <div class="d-flex justify-content-end">
+                            <div class="btn-group w-50">
+                              <button
+                                href="#"
+                                class="btn btn-sm btn-outline-dark text-end"
+                              >
+                                <i class="bi bi-pen"></i>
+                              </button>
+                              <button
+                                class="btn btn-outline-dark dropdown-toggle text-end"
+                                type="button"
+                                id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="bi bi-gear"></i>
+                              </button>
+                              <ul
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton1"
+                              >
+                                <li>
+                                  <a class="dropdown-item" href="#"
+                                    >edit state</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item text-danger"
+                                    href="#"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                    data-bs-order-id="CH123456788"
+                                    >delete</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- pagination -->
+              <div class="card-footer d-flex justify-content-end pt-3">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="modal fade"
+            id="deleteModal"
+            tabindex="-1"
+            aria-labelledby="deleteModal"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Delete Order
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Confirm Deletion of Order:
+                    <span id="deleteText" class="fw-bold my-3"></span>
+                    ?
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-outline-dark"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    Confirm Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="mt-auto py-3 bg-secondary bg-opacity-25 mt-5">
+          <div class="container">
+            <div class="text-center">
+              <p class="m-0 text-muted">Version update: 2023.01.7</p>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/orderMadal.js"></script>
+  </body>
+</html>

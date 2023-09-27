@@ -6,5 +6,3 @@ function toggleNav(e) {
   body.classList.toggle("sidebar--toggled");
 }
 toggleNavBtn.addEventListener("click", toggleNav);
-
-// canvas

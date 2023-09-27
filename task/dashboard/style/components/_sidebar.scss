@@ -2,6 +2,8 @@
   width: $sidebar-width;
   margin-left: -$sidebar-width;
   transition: margin-left 0.25s;
+  position: fixed;
+  top: 0;
   @include media-breakpoint-up(md) {
     margin-left: 0;
     width: $sidebar-width;
@@ -12,6 +14,8 @@
   width: 100%;
   @include media-breakpoint-up(md) {
     width: calc(100vw - #{$sidebar-width});
+    margin-left: $sidebar-width;
+    transition: margin-left .25s;
   }
 }
 
@@ -19,14 +23,16 @@
   .sidebar {
     margin-left: 0;
   }
+  .main {
+    margin-left: $sidebar-width;
+  }
   @include media-breakpoint-up(md) {
     .sidebar {
-      margin-left: -$sidebar-width;
+      margin-left:-$sidebar-width;
     }
     .main {
       width: 100%;
       margin-left: 0;
-      transition: margin-left .25s;
     }
   }
 }
