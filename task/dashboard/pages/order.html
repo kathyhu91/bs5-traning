@@ -54,7 +54,7 @@
       </div>
     </aside>
     <main class="main d-flex flex-column">
-      <header class="bg-white w-100 border-bottom">
+      <header class="bg-white w-100 border-bottom sticky-top">
         <a href="#" class="d-inline-block py-3 px-4 border-end link-primary text-decoration-none" id="toggle-nav-btn"><i
              class="bi bi-arrows-angle-expand"></i></a>
       </header>
@@ -100,7 +100,8 @@
                 <h3 class="card-header display-6 text-secondary">
                   Purchase Items
                 </h3>
-                <div class="card-body p-0 table-responsive">
+                <div class="card-body p-0">
+                  <div class="table-responsive">
                   <table class="table table-hover mb-0 text-nowrap align-middle w-100 " style="font-size: 14px">
                     <thead class="bg-light">
                       <tr>
@@ -244,6 +245,7 @@
                       </tr>
                     </tbody>
                   </table>
+                </div>
                   <div class="px-4 py-3">
                     <select class="form-select form-select-lg bg-info bg-opacity-25" aria-label="shipping-status">
                       <option selected disabled>Shipping Status Management.</option>
@@ -298,27 +300,27 @@
                 </h3>
                 <div class="card-body">
                   <div class="row align-items-center mb-3">
-                    <div class="col-2">
-                      <button type="button" class="btn btn-outline-primary w-100">Refund</button>
-                    </div>
-                    <div class="col">
-                      Returning the full order cost to the customer.
-                    </div>
+                      <div class="col-12 col-lg-2">
+                        <button type="button" class="btn btn-outline-primary w-100">Refund</button>
+                      </div>
+                      <div class="col-12 col-lg-10">
+                        <p class="text-center text-lg-start">Returning the full order cost to the customer.</p>
+                      </div>
                   </div>
                   <div class="row align-items-center mb-3">
-                    <div class="col-2">
+                    <div class="col-12 col-lg-2">
                       <button type="button" class="btn btn-outline-primary w-100">Credit Note</button>
                     </div>
-                    <div class="col">
-                      Refunding a portion of the payment for an already issued order.
+                    <div class="col-12 col-lg-10">
+                      <p class="text-center text-lg-start">Refunding a portion of the payment for an already issued order.</p>
                     </div>
                   </div>
                   <div class="row align-items-center">
-                    <div class="col-2">
+                    <div class="col-12 col-lg-2">
                       <button type="button" class="btn btn-outline-danger w-100">Delete Order</button>
                     </div>
-                    <div class="col">
-                      Delete the order and remove associated order information.
+                    <div class="col-12 col-lg-10">
+                       <p class="text-center text-lg-start">Delete the order and remove associated order information.</p>
                     </div>
                   </div>
                 </div>
@@ -327,12 +329,8 @@
             </div>
           </div>
       </section>
-      <footer class="mt-auto py-3 bg-secondary bg-opacity-25 mt-5">
-        <div class="container">
-          <div class="text-center">
-            <p class="m-0 text-muted">Version update: 2023.01.7</p>
-          </div>
-        </div>
+      <footer class="mt-auto py-3 bg-secondary bg-opacity-25 mt-5 text-center">
+        <p class="m-0 text-muted">Version update: 2023.01.7</p>
       </footer>
     </main>
   </div>
